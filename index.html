@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>NotesBazaar - Premium Handwritten Exam Notes</title>
+    <meta name="description" content="Download premium handwritten notes for SSC, UPSC, Banking exams. Concise study material, instant access from top educators.">
+    <meta name="keywords" content="handwritten notes, SSC preparation, UPSC study material, buy notes online, PDF notes, competitive exams, study materials">
+    <meta name="author" content="NotesBazaar">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="NotesBazaar - Premium Handwritten Exam Notes">
+    <meta property="og:description" content="Download premium handwritten notes for SSC, UPSC, Banking exams. Concise study material, instant access.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6d9dc5;
+            --accent-color: #ff7e5f;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --success-color: #28a745;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 56px; /* For fixed navbar */
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(74, 111, 165, 0.9), rgba(109, 157, 197, 0.9)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        .product-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+        }
+        
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .description {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 72px;
+        }
+        
+        .btn-buy {
+            background-color: var(--success-color);
+            border-color: var(--success-color);
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+        }
+        
+        .btn-demo {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .loading-spinner {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            margin-top: 4rem;
+        }
+        
+        .footer a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-journal-bookmark-fill me-2"></i>NotesBazaar
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">Premium Handwritten Study Notes</h1>
+                    <p class="lead mb-4">Access high-quality, curated handwritten notes for competitive exams. Created by top educators to help you study smarter and score higher.</p>
+                    <a href="#products" class="btn btn-light btn-lg px-4">
+                        <i class="bi bi-arrow-down-circle me-2"></i>Explore Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+                    <h4>Handwritten & Neat</h4>
+                    <p class="text-muted">All notes are carefully handwritten with clear diagrams and organized content.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+                    <h4>Instant Access</h4>
+                    <p class="text-muted">Get digital PDFs immediately after purchase. No waiting for delivery.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h4>Exam Focused</h4>
+                    <p class="text-muted">Content tailored specifically for SSC, UPSC, Banking, JEE, NEET and other competitive exams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5 bg-light" id="products">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2 class="display-5 mb-3">Featured Study Materials</h2>
+                    <p class="lead text-muted">Choose from our collection of premium handwritten notes</p>
+                </div>
+            </div>
+            
+            <!-- Loading Spinner -->
+            <div id="loading-spinner" class="row">
+                <div class="col text-center py-5">
+                    <div class="spinner-border text-primary loading-spinner" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3">Loading products...</p>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div id="products-container" class="row g-4" style="display: none;">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+            
+            <!-- Error Message (hidden by default) -->
+            <div id="error-message" class="row" style="display: none;">
+                <div class="col text-center py-5">
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading">Unable to Load Products</h4>
+                        <p>We're having trouble loading our study materials. Please check your internet connection and try again.</p>
+                        <button id="retry-button" class="btn btn-outline-danger">Retry</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">About NotesBazaar</h2>
+                    <p class="lead">Your trusted partner in exam preparation since 2023.</p>
+                    <p>NotesBazaar was founded with a simple mission: to make high-quality study materials accessible to every student. We collaborate with top educators and rank holders to create comprehensive, handwritten notes that cover entire syllabi in a concise manner.</p>
+                    <p>Our notes are designed to save you time, reduce your study load, and help you focus on what matters most for your exams.</p>
+                    <ul>
+                        <li>100% Digital - Instant access after purchase</li>
+                        <li>Created by experts and top rank holders</li>
+                        <li>Regular updates based on latest exam patterns</li>
+                        <li>Money-back guarantee if not satisfied</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Students studying" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="mb-3">
+                        <i class="bi bi-journal-bookmark-fill me-2"></i>NotesBazaar
+                    </h4>
+                    <p>Your study partner for competitive exam preparation. Providing premium handwritten notes to help you achieve your dreams.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home">Home</a></li>
+                        <li class="mb-2"><a href="#products">Products</a></li>
+                        <li class="mb-2"><a href="#about">About Us</a></li>
+                        <li class="mb-2"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">SSC Exams</a></li>
+                        <li class="mb-2"><a href="#">UPSC Civil Services</a></li>
+                        <li class="mb-2"><a href="#">Banking Exams</a></li>
+                        <li class="mb-2"><a href="#">Engineering (JEE)</a></li>
+                        <li class="mb-2"><a href="#">Medical (NEET)</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> support@notesbazaar.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +91 98765 43210</li>
+                        <li class="mb-2"><i class="bi bi-clock me-2"></i> Mon-Sat: 10AM - 7PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 NotesBazaar. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="me-3">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Replace this with your deployed Google Apps Script Web App URL
+        const GAS_API_URL = "YOUR_DEPLOYED_APPSCRIPT_URL_HERE";
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load products when page loads
+            loadProducts();
+            
+            // Add retry button event listener
+            document.getElementById('retry-button').addEventListener('click', loadProducts);
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Function to fetch and display products
+        async function loadProducts() {
+            const spinner = document.getElementById('loading-spinner');
+            const container = document.getElementById('products-container');
+            const errorMsg = document.getElementById('error-message');
+            
+            // Show loading, hide container and error
+            spinner.style.display = 'block';
+            container.style.display = 'none';
+            errorMsg.style.display = 'none';
+            
+            try {
+                // Fetch data from Google Apps Script API
+                const response = await fetch(GAS_API_URL);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                
+                const products = await response.json();
+                
+                // Hide loading spinner
+                spinner.style.display = 'none';
+                
+                // If no products found
+                if (!products || products.length === 0) {
+                    container.innerHTML = `
+                        <div class="col-12 text-center py-5">
+                            <div class="alert alert-info" role="alert">
+                                <h4 class="alert-heading">No Products Available</h4>
+                                <p>Check back soon for our study materials!</p>
+                            </div>
+                        </div>
+                    `;
+                    container.style.display = 'block';
+                    return;
+                }
+                
+                // Clear container and render products
+                container.innerHTML = '';
+                
+                products.forEach(product => {
+                    const productCard = createProductCard(product);
+                    container.innerHTML += productCard;
+                });
+                
+                // Show container
+                container.style.display = 'grid';
+                
+            } catch (error) {
+                console.error('Error loading products:', error);
+                
+                // Hide loading, show error
+                spinner.style.display = 'none';
+                errorMsg.style.display = 'block';
+            }
+        }
+        
+        // Function to create HTML for a product card
+        function createProductCard(product) {
+            // Determine badge color based on category
+            let badgeClass = 'bg-primary';
+            if (product.category === 'SSC') badgeClass = 'bg-info';
+            else if (product.category === 'UPSC') badgeClass = 'bg-warning text-dark';
+            else if (product.category === 'Banking') badgeClass = 'bg-success';
+            else if (product.category === 'NEET') badgeClass = 'bg-danger';
+            else if (product.category === 'JEE') badgeClass = 'bg-secondary';
+            
+            return `
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="${product.imageUrl || 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'}" 
+                                 class="card-img-top product-img" 
+                                 alt="${product.title}"
+                                 onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                            <span class="badge ${badgeClass} category-badge">${product.category}</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${product.title}</h5>
+                            <p class="card-text description text-muted">${product.description}</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="price-tag">${product.priceDisplay}</span>
+                                    <small class="text-muted">Instant Digital Access</small>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <a href="${product.demoLink || '#'}" 
+                                       target="_blank" 
+                                       class="btn btn-outline-primary btn-demo">
+                                        <i class="bi bi-file-earmark-pdf me-2"></i>View Demo PDF
+                                    </a>
+                                    <a href="${product.topmatePaymentLink || '#'}" 
+                                       target="_blank" 
+                                       class="btn btn-success btn-buy">
+                                        <i class="bi bi-cart-check me-2"></i>Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Initialize tooltips (if any)
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+</html>
